@@ -1,0 +1,6 @@
+com\example\demo\entity\TestUser.class
+com\example\demo\entity\TestUserMapper.class
+com\example\demo\service\TestUserService.class
+com\example\demo\controller\UserController.class
+com\example\demo\service\impl\TestUserServiceImpl.class
+com\example\App01Application.class

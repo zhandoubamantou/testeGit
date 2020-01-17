@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+ PUBLIC " -//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+ "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+ <generatorConfiguration>
+ 		<!-- 数据库的jar包的位置 -->
+ 		<classPathEntry location="D:\java\mavenrepository\com\microsoft\sqlserver\mssql-jdbc\6.4.0.jre8\mssql-jdbc-6.4.0.jre8.jar"/>
+ 		<context id="default" targetRuntime="Mybatis3">
+ 			<commentGenerator>
+ 				<property name="suppressDate" value="false"/>
+ 				<property name="suppressAllComents" value="true"/>
+ 			</commentGenerator>
+ 			<!-- 数据库连接 -->
+ 			<jdbcConnection driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver" connectionURL="jdbc:sqlserver://localhost:1433;databaseName=Ma"
+ 							userId="mawenzheng" password="a19940510A">
+ 			</jdbcConnection>
+ 			
+ 			<javaTypeResolver>
+ 				<property name="forceBigDecimals" value="false"/>
+ 			</javaTypeResolver>
+ 			
+ 			   <!-- 生成实体类地址 -->
+ 			<javaModelGenerator targetPackage="com.example.demo.entity" targetProject="app01/src/main/java"></javaModelGenerator>
+ 			<!-- 生成mapper xml文件 -->
+ 			<sqlMapGenerator targetPackage="mapping" targetProject="app01/src/main/resources"></sqlMapGenerator>
+ 			  <!-- 生成mapper xml对应类-->
+ 			<javaClientGenerator targetPackage="com.example.demo.entity" type="XMLMAPPER" targetProject="app01/src/main/java"></javaClientGenerator>
+ 			<!-- 表 -->
+ 			<table tableName="TEST_USER" domainObjectName="TestUser" enableCountByExample="false" 
+ 			enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+ 		</context>
+ </generatorConfiguration>

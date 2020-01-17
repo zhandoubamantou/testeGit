@@ -1,0 +1,27 @@
+server:
+  port: 8080
+  
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1433;databaseName=Ma
+    username: mawenzheng
+    password: a19940510A
+  resources:
+    chain:
+      cache: false
+
+    
+mybatis:
+  mapper-locations: classpath:/mapping/*Mapper.xml
+  type-aliases-package: com.example.demo.entity
+  
+
+#showSql
+logging:
+  level:
+    com:
+      example:
+        mapper: debug  
+  
+  
